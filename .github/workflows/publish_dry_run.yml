@@ -1,4 +1,4 @@
-name: publish Dry Run
+name: Publish
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 jobs:
-  build:
+  publish dry run:
     runs-on: ubuntu-latest
 
     steps:
