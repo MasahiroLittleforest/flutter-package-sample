@@ -1,7 +1,7 @@
 name: flutter_package_sample
 description: A new Flutter package.
 version: 0.0.4
-repository: URL
+repository: https://github.com/MasahiroLittleforest/flutter-package-sample
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
