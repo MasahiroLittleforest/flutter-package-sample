@@ -1,0 +1,35 @@
+name: publish Dry Run
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'stable'
+      
+      - name: Print Dart SDK version
+        run: dart --version
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Analyze project source
+        run: dart analyze
+
+      - name: Run tests
+        run: flutter test
+      
+      - name: Publish Dry Run
+        run: flutter pub publish --dry-run
