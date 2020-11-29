@@ -1,6 +1,6 @@
 name: flutter_package_sample
 description: A new Flutter package.
-version: 0.0.4
+version: 0.0.5
 repository: https://github.com/MasahiroLittleforest/flutter-package-sample
 
 environment:
